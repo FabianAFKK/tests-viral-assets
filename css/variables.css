@@ -1,0 +1,63 @@
+/*
+  VARIABLES.CSS
+  Sistema de diseño de la plataforma de tests.
+  Cambiar un valor aquí lo actualiza en todo el sitio.
+*/
+
+:root {
+
+  /* ---------- Superficies ---------- */
+  --bg: #0A0B14;              /* fondo general, negro-índigo (no negro puro) */
+  --surface-1: #15172A;       /* header, footer, tarjetas */
+  --surface-2: #1D2038;       /* estado hover / elementos elevados */
+  --border: #2A2D45;          /* bordes sutiles */
+  --border-strong: #383B5C;   /* bordes en hover / foco */
+
+  /* ---------- Texto ---------- */
+  --text-primary: #F3F1FA;    /* blanco cálido, no blanco puro */
+  --text-secondary: #9C9AB8;
+  --text-muted: #6B6885;
+
+  /* ---------- Color de acción ----------
+     Usar EXCLUSIVAMENTE para botones y CTAs (Comenzar, Siguiente, Repetir).
+     No usar para decorar texto o iconos secundarios. */
+  --accent: #FF3D8A;
+  --accent-hover: #FF619E;
+  --accent-text-on: #2B0316;  /* texto oscuro cuando el fondo es accent */
+
+  /* ---------- Sistema de rareza ----------
+     Se usa en la pantalla de resultado (Fase 4): cada resultado de un test
+     pertenece a un nivel de rareza, igual que una carta coleccionable.
+     Esto es lo que da la sensación de "quiero repetir para conseguir
+     el resultado legendario". */
+  --rarity-common: #9C9AB8;
+  --rarity-rare: #3DE8FF;
+  --rarity-epic: #C77DFF;
+  --rarity-legendary: #FFB84D;
+
+  /* ---------- Tipografía ---------- */
+  --font-display: 'Unbounded', system-ui, sans-serif; /* títulos, resultado, wordmark */
+  --font-body: 'Manrope', system-ui, sans-serif;       /* todo lo demás */
+
+  /* ---------- Espaciado ---------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  /* ---------- Radios y sombra ---------- */
+  --radius-card: 20px;
+  --radius-btn: 14px;
+  --radius-pill: 999px;
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  /* ---------- Layout ---------- */
+  --content-width: 600px;   /* ancho máximo de columna de contenido/quiz */
+  --home-width: 1080px;     /* ancho máximo del grid de tarjetas en Home */
+
+  /* ---------- Movimiento ---------- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 0.15s var(--ease);
+  --transition-base: 0.3s var(--ease);
+}
