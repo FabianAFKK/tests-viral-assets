@@ -1,0 +1,142 @@
+/*
+  COMPONENTS.CSS
+  Piezas reutilizables. Fase 3 añadirá aquí las clases del grid de Home
+  y Fase 4 las de la pantalla de preguntas y de resultado.
+*/
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface-1);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+.site-header__logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: var(--space-xl);
+  border-top: 1px solid var(--border);
+  background: var(--surface-1);
+}
+
+.site-footer__inner {
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.site-footer__text {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 14px 28px;
+  border-radius: var(--radius-btn);
+  font-weight: 700;
+  font-size: 15px;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ---------- Tarjeta base ---------- */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+}
+
+/* ---------- Espacios publicitarios ----------
+   Un ad-slot que solo contiene el comentario placeholder no tiene
+   contenido real, así que :empty lo colapsa a 0 y el sitio se ve limpio.
+   En cuanto se pegue el código de la red publicitaria dentro, deja de
+   estar "vacío" y ocupa espacio de forma natural. */
+.ad-slot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ad-slot:empty {
+  display: none;
+}
+
+.ad-slot--top,
+.ad-slot--pre-result,
+.ad-slot--footer {
+  margin: var(--space-md) auto;
+  max-width: var(--content-width);
+}
+
+/* Las columnas laterales solo existen en escritorio */
+.ad-slot--rail {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .ad-slot--rail {
+    display: flex;
+    position: fixed;
+    top: 120px;
+    width: 160px;
+  }
+
+  .ad-slot--rail-left { left: 24px; }
+  .ad-slot--rail-right { right: 24px; }
+}
