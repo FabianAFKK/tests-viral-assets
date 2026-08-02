@@ -16,6 +16,15 @@
 (function () {
   'use strict';
 
+  var root = document.getElementById('home-root');
+  if (!root) return;
+
+  var isHomepage = /^\/?(index\.html)?$/.test(window.location.pathname);
+  if (!isHomepage) {
+    root.remove();
+    return;
+  }
+
   var GRID_ID = 'home-grid';
   var LABEL = 'test';
   var FEED_URL = '/feeds/posts/default/-/' + LABEL + '?alt=json&max-results=150';
